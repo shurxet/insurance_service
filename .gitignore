@@ -1,0 +1,24 @@
+# Лог-файлы
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+.venv
+
+# Data DB
+postgres_data
+
+# Docker
+*.env
+
+# IDE/Редакторы
+.vscode/
+.idea/
+
+# Node.js
+node_modules/
+
+# Сборки
+dist/
+build/
