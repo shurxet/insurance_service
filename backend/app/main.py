@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
-from .api import api_router
-from .core.database import init_db
+from app.api import api_router
+from app.core.database import init_db
 
 app = FastAPI(
     title="Insurance Service",

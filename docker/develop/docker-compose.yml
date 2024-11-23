@@ -3,7 +3,7 @@ version: '3.8'
 
 services:
   db:
-    image: postgres:16.0
+    image: postgres:15.0
     container_name: db
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
@@ -13,12 +13,22 @@ services:
       - ./postgres_data/:/var/lib/postgresql/data
     restart: on-failure
     healthcheck:
-      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      test: [ "CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}" ]
       interval: 5s
       timeout: 5s
       retries: 5
     ports:
       - "5432:5432"
+
+  mg:
+    container_name: mg
+    build: ../../backend
+    env_file:
+      - .env
+    command: [ "sh", "migrate.sh" ]
+    depends_on:
+      db:
+        condition: service_healthy
 
   api:
     container_name: api
@@ -28,8 +38,24 @@ services:
     depends_on:
       db:
         condition: service_healthy
+      mg:
+        condition: service_completed_successfully
     volumes:
       - ../../backend/app:/backend/app
     ports:
       - "8000:8000"
     command: ["sh", "entrypoint.sh"]
+
+  seed:
+    container_name: seed
+    build: ../../backend
+    env_file:
+      - .env
+    depends_on:
+      db:
+        condition: service_healthy
+      mg:
+        condition: service_completed_successfully
+      api:
+        condition: service_started
+    command: [ "sh", "seed.sh" ]
