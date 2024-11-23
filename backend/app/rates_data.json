@@ -1,0 +1,142 @@
+{
+  "2020-06-01": [
+    {
+      "cargo_type": "Glass",
+      "rate": 0.04
+    },
+    {
+      "cargo_type": "Other",
+      "rate": 0.01
+    },
+    {
+      "cargo_type": "Metal",
+      "rate": 0.03
+    }
+  ],
+  "2020-07-01": [
+    {
+      "cargo_type": "Glass",
+      "rate": 0.035
+    },
+    {
+      "cargo_type": "Other",
+      "rate": 0.015
+    },
+    {
+      "cargo_type": "Plastic",
+      "rate": 0.02
+    }
+  ],
+  "2020-08-01": [
+    {
+      "cargo_type": "Glass",
+      "rate": 0.03
+    },
+    {
+      "cargo_type": "Other",
+      "rate": 0.02
+    },
+    {
+      "cargo_type": "Wood",
+      "rate": 0.025
+    }
+  ],
+  "2020-09-01": [
+    {
+      "cargo_type": "Glass",
+      "rate": 0.025
+    },
+    {
+      "cargo_type": "Other",
+      "rate": 0.018
+    },
+    {
+      "cargo_type": "Metal",
+      "rate": 0.027
+    }
+  ],
+  "2020-10-01": [
+    {
+      "cargo_type": "Glass",
+      "rate": 0.028
+    },
+    {
+      "cargo_type": "Other",
+      "rate": 0.016
+    },
+    {
+      "cargo_type": "Plastic",
+      "rate": 0.022
+    }
+  ],
+  "2020-11-01": [
+    {
+      "cargo_type": "Glass",
+      "rate": 0.027
+    },
+    {
+      "cargo_type": "Other",
+      "rate": 0.017
+    },
+    {
+      "cargo_type": "Wood",
+      "rate": 0.026
+    }
+  ],
+  "2020-12-01": [
+    {
+      "cargo_type": "Glass",
+      "rate": 0.03
+    },
+    {
+      "cargo_type": "Other",
+      "rate": 0.014
+    },
+    {
+      "cargo_type": "Metal",
+      "rate": 0.028
+    }
+  ],
+  "2021-01-01": [
+    {
+      "cargo_type": "Glass",
+      "rate": 0.031
+    },
+    {
+      "cargo_type": "Other",
+      "rate": 0.013
+    },
+    {
+      "cargo_type": "Plastic",
+      "rate": 0.021
+    }
+  ],
+  "2021-02-01": [
+    {
+      "cargo_type": "Glass",
+      "rate": 0.029
+    },
+    {
+      "cargo_type": "Other",
+      "rate": 0.012
+    },
+    {
+      "cargo_type": "Wood",
+      "rate": 0.024
+    }
+  ],
+  "2021-03-01": [
+    {
+      "cargo_type": "Glass",
+      "rate": 0.032
+    },
+    {
+      "cargo_type": "Other",
+      "rate": 0.011
+    },
+    {
+      "cargo_type": "Metal",
+      "rate": 0.029
+    }
+  ]
+}
