@@ -1,4 +1,5 @@
 from pydantic import BaseModel
+from datetime import datetime
 
 
 class InsuranceRequest(BaseModel):
@@ -12,3 +13,10 @@ class InsuranceResponse(BaseModel):
 
     class Config:
         from_attributes = True
+
+
+class InsuranceLogCreate(BaseModel):
+    cargo_id: int
+    action: str
+    insurance_cost: float
+    timestamp: datetime
