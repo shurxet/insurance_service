@@ -1,10 +1,9 @@
 from aiokafka import AIOKafkaProducer
-import asyncio
 import json
 
 
 async def send_log_to_kafka(user_id: int, action: str, timestamp: str):
-    producer = AIOKafkaProducer(bootstrap_servers='localhost:9092')
+    producer = AIOKafkaProducer(bootstrap_servers='kafka:9092')
     await producer.start()
     try:
         message = {
